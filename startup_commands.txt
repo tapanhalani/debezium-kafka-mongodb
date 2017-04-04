@@ -1,0 +1,5 @@
+kafka_2.10-0.10.1.1/bin/zookeeper-server-start.sh kafka_2.10-0.10.1.1/config/zookeeper.properties &
+
+kafka_2.10-0.10.1.1/bin/kafka-server-start.sh kafka_2.10-0.10.1.1/config/server.properties &
+
+CLASSPATH=./kafka_2.10-0.10.1.1/connect/debezium/*  kafka_2.10-0.10.1.1/bin/connect-standalone.sh  kafka_2.10-0.10.1.1/config/connect-standalone.properties kafka_2.10-0.10.1.1/config/mongo-connector.properties &
